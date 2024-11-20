@@ -9,7 +9,7 @@ NHN Bastion allows you to control access to instances on NHN Cloud. This documen
 ![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
 
 1. Go to **Security > NHN Bastion**.
-2. Set each item and click **Create Instance** at the bottom.
+2. Set each item and click **Create Web Terminal** at the bottom.
     * **Name**(required): A name to distinguish between web terminals if you use multiple web terminals.
     * **Availability** zone (required): Availability zone to use in the web terminal.
     * **Type**(required): Instance performance of the web terminal.
@@ -328,6 +328,10 @@ Delete all resources created by the NHN Bastion service.
 
 ### Web Terminal
 Provides a browser-based web terminal with file upload/download capabilities.
+
+
+> [Note]
+> To paste what is copied locally to the remote server, you must allow the permission to view text or images stored in the clipboard from the browser.
 
 #### Transfer Files
 You can launch the file navigator by clicking the right arrow button. The file navigator allows you to upload or download files with the desired path.
