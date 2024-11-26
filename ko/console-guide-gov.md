@@ -6,7 +6,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 2. NHN Bastion은 서비스 제공을 위하여 API 연동을 통해 사용자의 자원에 접근할 수 있는 권한이 필요합니다.
 
 ### NHN Bastion 생성
-![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
+![image](https://github.com/user-attachments/assets/7757405a-b55d-4180-9fb0-cf3711994c0e)
 
 1. **Security > NHN Bastion**으로 이동합니다.
 2. 각 항목을 설정하고 하단의 **웹 터미널 생성**을 클릭합니다.
@@ -17,6 +17,8 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
     * **VPC**(필수): 웹 터미널에서 사용할 VPC
     * **서브넷**(필수): 웹 터미널에서 사용할 서브넷
     * **플로팅 IP**(필수): 웹 터미널에서 사용할 플로팅 IP 사용 유무
+        * Public Network: 플로팅 IP로 공인 IP를 사용합니다.
+        * VPN Network: 플로팅 IP로 SSL VPN으로 접근 가능한 IP를 사용합니다.
     * **암호화**(필수): 로그 암호화 저장 유무
         * 대칭 키 ID: Secure Key Manager 서비스에서 관리하는 대칭 키 ID
         * 암호화 설정을 위해서는 사전에 Secure Key Manager 서비스에서 대칭 키를 생성해야 합니다.
@@ -213,6 +215,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 > * 임시 SSH 키 접근 방식은 선택한 웹 터미널에서만 적용되며, 다른 경로를 통해 접근할 때에는 제공되지 않습니다.
 > * 웹 터미널의 **IP 접근 제어**에 접속 대상 인스턴스 IP가 추가되어 있어야 합니다.
 > * 접속 대상 인스턴스의 Security Groups에서 웹 터미널 IP로 443 포트 아웃바운드 정책이 추가되어 있어야 합니다.
+
 
 #### 자원 그룹
 
