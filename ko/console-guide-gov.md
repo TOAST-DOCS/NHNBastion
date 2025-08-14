@@ -37,6 +37,8 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 
 <strong>정책 관리</strong>에서 사용자에게 접근이 허용된 인스턴스 목록만 표시되며 접근이 허용된 인스턴스에 접근할 수 있습니다.
 
+<img width="1615" height="223" alt="image" src="https://github.com/user-attachments/assets/5f42116a-1bd5-455d-997d-9fe32fbed925" />
+
 #### 인스턴스 접근
 
 1. 접근이 필요한 인스턴스에서 **연결**을 클릭합니다.
