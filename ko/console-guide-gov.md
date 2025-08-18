@@ -6,7 +6,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 2. NHN Bastion은 서비스 제공을 위하여 API 연동을 통해 사용자의 자원에 접근할 수 있는 권한이 필요합니다.
 
 ### NHN Bastion 생성
-![image](https://github.com/user-attachments/assets/7757405a-b55d-4180-9fb0-cf3711994c0e)
+![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
 
 1. **Security > NHN Bastion**으로 이동합니다.
 2. 각 항목을 설정하고 하단의 **웹 터미널 생성**을 클릭합니다.
@@ -77,7 +77,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 NHN Bastion 서비스에 권한이 있는 사용자 목록을 확인하고 사용자 그룹을 생성 및 관리할 수 있습니다.
 
 #### 사용자 목록
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/38558289-7b24-4030-899a-9a202b75a2e4)
+<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/e408468a-66a0-406c-b6df-7e42790e71f9" />
 
 NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용자의 권한 및 마지막으로 인스턴스에 접근한 일시를 확인할 수 있습니다.
 관리 기능을 통해 사용자의 계정 잠금과 잠금된 사용자를 잠금 해제할 수 있습니다.
@@ -289,7 +289,6 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
     * **로그**: 선택한 이력의 세션에서 사용한 명령어 이력을 확인할 수 있습니다.
 
 ### 환경 설정
-![image](https://github.com/user-attachments/assets/b88fbdf3-a16c-426a-8a5f-a71ced18cc98)
 
 #### 세션 타임아웃
 
