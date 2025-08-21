@@ -35,6 +35,8 @@ NHN Bastion allows you to control access to instances on NHN Cloud. This documen
 
 In <strong>Manage Policies</strong>, users only see a list of instances they are allowed to access, and they can access the instances they are allowed to access.
 
+<img width="1615" height="223" alt="image" src="https://github.com/user-attachments/assets/5f42116a-1bd5-455d-997d-9fe32fbed925" />
+
 #### Access Instances
 
 1. On the instance you need access to, click **Connect**.
@@ -55,17 +57,31 @@ In <strong>Manage Policies</strong>, users only see a list of instances they are
 > * Password authentication requires the operating system to enable password access.
 > * Temporary SSH key authentication is only accessible through the web terminal from which you copied the script.
 
+#### Deploy Scripts
+The script deployment feature allows you to run commands/scripts on multiple instances.
+
+1. Select instances for deploying scripts/commands.
+2. Click **Deploy Scripts**.
+3. Select a web terminal, how to enter authentication information and enter the authentication information.
+   * **All**: Use when the authentication information of the deployment target instances is all the same.
+   * **Each**: Use when the authentication information of the deployment target instances is different.
+4. Click **Deploy**.
+5. You can check the execution results and deployment results in the script deployment status.
+6. You can end the deployment with **End Deployment**.
+7. You can view ongoing deployments and the results by clicking **Deployment Progress**.
+
 ### Manage Users
 
 You can view a list of users authorized to use the NHN Bastion service and create and manage user groups.
 
 #### User List
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/38558289-7b24-4030-899a-9a202b75a2e4)
+<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/2897e7a3-3ef5-46be-a966-e8ed3aecd900" />
 
 A list of users authorized to use the NHN Bastion service. You can check the user's permissions and when they last accessed the instance.
+You can lock or unlock a user's account with the management function.
 
-#### Group
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/99d6d052-bca4-4150-a55e-99d375de7dc1)
+> [Note]
+> When an administrator locks an account directly, it will be locked permanently, regardless of the lockout duration of **Preferences**.
 
 You can create and manage user groups, and the groups you create can be enrolled as access subjects on the <strong>Manage Policies</strong> tab.
 
@@ -267,7 +283,6 @@ You can see the history of users uploading/downloading files to your instance, a
     * **Log**: View the history of commands used in the selected history session.
 
 ### Set Up an Environment
-![image](https://github.com/user-attachments/assets/b88fbdf3-a16c-426a-8a5f-a71ced18cc98)
 
 #### Session timeouts
 
@@ -317,6 +332,23 @@ If you performed key rotation in Secure Key Manager, you can update an older ver
 
 > [Caution]
 > If you do not update the key in the NHN Bastion service after performing key rotation in Secure Key Manager, an error might occur in the log inquiry.
+
+#### Session Blocking
+
+You can block a session if a user uses the banned commands more than a certain number of times.
+
+#### Account Lockout
+
+Your account may be locked due to authentication failure and session blocking.
+* Account Lockout Duration: Set the lockout time when your account is locked.
+* Consecutive Session Blocking: the account will be locked if a certain number of sessions are blocked in a row.
+* Hourly Session Blocking: the account will be locked if a certain number of sessions are blocked within an hour.
+* Continuous Authentication Failed: the account will be locked if you fail to authenticate more than a certain number of times in a row.
+* Hourly Authentication Failed: the account will be locked if you fail to authenticate more than a certain number of times within an hour.
+
+> [Note]
+> When an administrator locks an account directly from **User Management**, it will be locked permanently, regardless of the lockout duration.
+> If an administrator directly blocks a session from **Live Session**, it will not be counted towards the number of session blockings.
 
 #### Delete NHN Bastion
 
