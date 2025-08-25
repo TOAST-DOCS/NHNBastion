@@ -1,5 +1,11 @@
 ## Security > NHN Bastion > Release Notes
 
+## August 26, 2025
+### Feature Updates
+* Added the feature of session blocking
+* Added the feature of Account Lockout
+* Added the feature to deploy scripts/comman instances
+
 ## Oct 29, 2024
 ### Feature Updates
 * Added log encryption
@@ -17,3 +23,5 @@
 
 ## July 23, 2024
 * Released NHN Bastion service
+  
+
