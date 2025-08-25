@@ -30,6 +30,7 @@ NHN Bastion is a server access control service for secure access to infrastructu
 
 * Provides three access methods - SSH key, password, and temporary SSH key - so you can use the authentication method that fits your environment.
 
+* You can deploy commands (scripts) to multiple instances at once.
 
 #### Manage Users
 
@@ -71,8 +72,10 @@ NHN Bastion is a server access control service for secure access to infrastructu
 
 * Audits file transfer history.
 
+
 #### Set up Preferences
 
 
 * Provides configuration features such as session timeout, maximum connected sessions, log backup, connection port management, and encryption.
+
 
