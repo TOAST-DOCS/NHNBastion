@@ -77,7 +77,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 NHN Bastion 서비스에 권한이 있는 사용자 목록을 확인하고 사용자 그룹을 생성 및 관리할 수 있습니다.
 
 #### 사용자 목록
-<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/e408468a-66a0-406c-b6df-7e42790e71f9" />
+<img width="1975" height="401" alt="image" src="https://github.com/user-attachments/assets/b18af5f5-3c1c-4762-922d-28effa241a01" />
 
 NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용자의 권한 및 마지막으로 인스턴스에 접근한 일시를 확인할 수 있습니다.
 관리 기능을 통해 사용자의 계정을 잠그거나 잠금 해제할 수 있습니다.
