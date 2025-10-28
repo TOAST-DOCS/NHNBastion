@@ -75,7 +75,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 NHN Bastion 서비스에 권한이 있는 사용자 목록을 확인하고 사용자 그룹을 생성 및 관리할 수 있습니다.
 
 #### 사용자 목록
-<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/2897e7a3-3ef5-46be-a966-e8ed3aecd900" />
+<img width="1975" height="401" alt="image" src="https://github.com/user-attachments/assets/93611e56-38ff-4c6d-a1fe-13ddec057cb5" />
 
 NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용자의 권한 및 마지막으로 인스턴스에 접근한 일시를 확인할 수 있습니다.
 관리 기능을 통해 사용자의 계정을 잠그거나 잠금 해제할 수 있습니다.
@@ -170,11 +170,11 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
         * 기본 설정: 환경 설정에 적용되어 있는 접속 포트
      
 * **외부 자원**
-   * **등록**: 레거시 환경의 서버나 타 프로젝트의 인스턴스 등을 수동으로 등록할 수 있습니다.
-   ![image](https://github.com/user-attachments/assets/1ab9806a-061c-478b-b9e0-38a5dabe4f50)
+    * **등록**: 레거시 환경의 서버나 타 프로젝트의 인스턴스 등을 수동으로 등록할 수 있습니다.
+    ![image](https://github.com/user-attachments/assets/1ab9806a-061c-478b-b9e0-38a5dabe4f50)
 
-   * **일괄 등록**: 외부 자원을 템플릿을 이용하여 일괄 등록할 수 있습니다.
-   ![image](https://github.com/user-attachments/assets/6806a22f-8a6a-4d38-b42e-1aa857004670)
+    * **일괄 등록**: 외부 자원을 템플릿을 이용하여 일괄 등록할 수 있습니다.
+    ![image](https://github.com/user-attachments/assets/6806a22f-8a6a-4d38-b42e-1aa857004670)
 
 > [주의]
 > 등록된 외부 자원에 대해서는 IP를 기준으로 웹 터미널에서 SSH 통신을 시도합니다. 웹 터미널에서 목적지 서버까지 통신이 가능한 환경에서만 서비스를 이용할 수 있습니다.
