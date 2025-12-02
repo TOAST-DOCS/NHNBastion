@@ -350,6 +350,13 @@ Your account may be locked due to authentication failure and session blocking.
 > When an administrator locks an account directly from **User Management**, it will be locked permanently, regardless of the lockout duration.
 > If an administrator directly blocks a session from **Live Session**, it will not be counted towards the number of session blockings.
 
+#### DB Replication
+
+Provides high availability by replicating DB to store user access history, command use history, and file transfer history.
+
+> [Caution]
+> NHN Bastion service will not be available while changing the configuration to enable/disable DB replication. The change would take about 15 minutes.
+
 #### Delete NHN Bastion
 
 Delete all resources created by the NHN Bastion service.
