@@ -1,5 +1,9 @@
 ## Security > NHN Bastion > Release Notes
 
+## December 9, 2025
+### Feature Updates
+* Added the DB replication feature
+
 ## August 26, 2025
 ### Feature Updates
 * Added the feature of session blocking
