@@ -310,10 +310,12 @@ NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storag
   * 한국(판교) 리전: https://kr1-api-object-storage.nhncloudservice.com
   * 한국(평촌) 리전: https://kr2-api-object-storage.nhncloudservice.com
   * 한국(광주) 리전: https://kr3-api-object-storage.nhncloudservice.com
+  * 한국(대구) 리전: https://kr4-api-object-storage.ngoic.com
 * **리전**
   * 한국(판교) 리전: KR1
   * 한국(평촌) 리전: KR2
   * 한국(광주) 리전: KR3
+  * 한국(대구) 리전: KR4
 
 > [참고]
 > 로그 암호화 사용 시 로그는 복호화하여 Object Storage에 백업됩니다.
@@ -328,14 +330,6 @@ NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storag
 
 > [참고]
 > 웹 터미널에서 접근 대상 인스턴스로 연결할 때 이용하는 포트로, 운영체제에서 설정한 SSH 포트로 설정해야 합니다.
-
-#### 암호화
-
-암호화 활성화 여부와 적용된 대칭 키 ID를 확인할 수 있습니다.
-Secure Key Manager에서 키 회전을 수행한 경우 키 회전 버튼을 통해 이전 버전의 키를 최신 버전으로 업데이트할 수 있습니다.
-
-> [주의]
-> Secure Key Manager에서 키 회전 수행 후 NHN Bastion 서비스에서 키를 업데이트하지 않을 경우 로그 조회에 오류가 발생할 수 있습니다.
 
 #### 세션 차단
 
