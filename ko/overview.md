@@ -1,10 +1,14 @@
-## Security > NHN Bastion > 개요
+<!-- pre-align:aligned sig=4b1c1907bb8f -->
+
+<a id="security-nhn-bastion-overview"></a>
+## Security > NHN Bastion > 개요 { #security-nhn-bastion-overview }
 
 
 NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록 제공하는 서버 접근 제어 서비스입니다.
 
 
-### 주요 기능
+<a id="main-features"></a>
+### 주요 기능 { #main-features }
 
 
 * 인스턴스에 대한 SSH 접근을 제어할 수 있으며, 허용 및 차단할 명령어를 등록할 수 있습니다.
@@ -20,9 +24,11 @@ NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록
 * 실시간 모니터링 및 세션 차단 기능을 제공합니다.
 
 
-### 기능 설명
+<a id="feature-description"></a>
+### 기능 설명 { #feature-description }
 
 
+<a id="feature-description-connect-instances"></a>
 #### 인스턴스 연결
 
 
@@ -33,6 +39,7 @@ NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록
 * 명령어(스크립트)를 복수의 인스턴스에 한 번에 배포할 수 있습니다.
 
 
+<a id="feature-description-manage-users"></a>
 #### 사용자 관리
 
 
@@ -41,12 +48,14 @@ NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록
 * 사용자 그룹을 생성 및 관리할 수 있으며, 역할, 부서 등으로 사용자들을 그룹화할 수 있습니다.
 
 
+<a id="feature-description-manage-policies"></a>
 #### 정책 관리
 
 
 * 사용자에 대한 접근 통제 및 명령어 통제 정책을 생성하고 관리할 수 있습니다.
 
 
+<a id="feature-description-manage-resources"></a>
 #### 자원 관리
 
 
@@ -64,6 +73,7 @@ NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록
 * 임시 SSH 키 접속 방식을 이용하기 위한 스크립트를 확인할 수 있습니다.
 
 
+<a id="feature-description-manage-history"></a>
 #### 이력 관리
 
 
@@ -74,6 +84,7 @@ NHN Bastion은 NHN Cloud의 인스턴스에 안전하게 접근할 수 있도록
 * 파일 전송 이력을 감사할 수 있습니다.
 
 
+<a id="feature-description-set-up-preferences"></a>
 #### 환경 설정
 
 

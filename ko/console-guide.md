@@ -1,11 +1,16 @@
-## Security > NHN Bastion > 콘솔 사용 가이드
+<!-- pre-align:aligned sig=64f6ff071b1f -->
+
+<a id="security-nhn-bastion-console-user-guide"></a>
+## Security > NHN Bastion > 콘솔 사용 가이드 { #security-nhn-bastion-console-user-guide }
 NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할 수 있습니다. 이 문서에서는 NHN Cloud 콘솔에서 NHN Bastion을 생성하고 접근이 필요한 인스턴스에 연결하는 방법과 사용자 및 정책, 자원, 이력을 관리하는 방법을 설명합니다.
-### 시작하기
+<a id="get-started"></a>
+### 시작하기 { #get-started }
 
 1. NHN Bastion을 사용하기 위해서는 가장 먼저 NHN Bastion 서비스를 활성화합니다.
 2. NHN Bastion은 서비스 제공을 위하여 API 연동을 통해 사용자의 자원에 접근할 수 있는 권한이 필요합니다.
 
-### NHN Bastion 생성
+<a id="create-an-nhn-bastion"></a>
+### NHN Bastion 생성 { #create-an-nhn-bastion }
 ![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
 
 1. **Security > NHN Bastion**으로 이동합니다.
@@ -31,12 +36,14 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 > * Secure Key Manager 서비스에서 로그 암호화에 설정한 대칭 키를 회전하는 경우, 이전 버전의 키를 즉시 삭제하지 않도록 주의가 필요합니다.
 > * Secure Key Manager 서비스에서 로그 암호화에 설정한 대칭 키를 삭제하면 암호화된 로그를 복호화할 수 없습니다. 대칭 키를 실수로 삭제하지 않도록 주의하여 관리해야 합니다.
 
-### 인스턴스 연결
+<a id="connecte-instances"></a>
+### 인스턴스 연결 { #connecte-instances }
 
 <strong>정책 관리</strong>에서 사용자에게 접근이 허용된 인스턴스 목록만 표시되며 접근이 허용된 인스턴스에 접근할 수 있습니다.
 
 <img width="1615" height="223" alt="image" src="https://github.com/user-attachments/assets/5f42116a-1bd5-455d-997d-9fe32fbed925" />
 
+<a id="connecte-instances-access-instances"></a>
 #### 인스턴스 접근
 
 1. 접근이 필요한 인스턴스에서 **연결**을 클릭합니다.
@@ -57,6 +64,7 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 > * 비밀번호 인증은 운영체제에서 비밀번호 접근이 가능하도록 설정해야 합니다.
 > * 임시 SSH 키 인증은 스크립트를 복사한 웹 터미널을 통해서만 접근할 수 있습니다.
 
+<a id="connecte-instances-deploy-scripts"></a>
 #### 스크립트 배포
 스크립트 배포 기능을 통해 복수의 인스턴스에 명령어/스크립트를 실행할 수 있습니다.
 
@@ -70,10 +78,12 @@ NHN Bastion을 이용해 NHN Cloud의 인스턴스에 대한 접근을 제어할
 6. **배포 종료**를 통해 배포를 중단할 수 있습니다.
 7. **배포 현황**을 클릭하여 진행 중인 배포 현황 및 결과를 볼 수 있습니다.
 
-### 사용자 관리
+<a id="manage-users"></a>
+### 사용자 관리 { #manage-users }
 
 NHN Bastion 서비스에 권한이 있는 사용자 목록을 확인하고 사용자 그룹을 생성 및 관리할 수 있습니다.
 
+<a id="manage-users-user-list"></a>
 #### 사용자 목록
 <img width="1975" height="401" alt="image" src="https://github.com/user-attachments/assets/93611e56-38ff-4c6d-a1fe-13ddec057cb5" />
 
@@ -83,6 +93,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 > [참고]
 > 관리자가 직접 계정을 잠금 처리하는 경우에는 **환경 설정**의 계정 잠금 시간과 상관없이 무기한 잠깁니다.
 
+<a id="manage-users-groups"></a>
 #### 그룹
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/99d6d052-bca4-4150-a55e-99d375de7dc1)
 
@@ -93,7 +104,8 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 * **수정**: 생성된 사용자 그룹을 수정할 수 있습니다.
 * **삭제**: 선택한 사용자 그룹을 삭제할 수 있습니다.
 
-### 정책 관리
+<a id="manage-policies"></a>
+### 정책 관리 { #manage-policies }
 ![image](https://github.com/user-attachments/assets/0a3683bb-5661-4867-83a6-6a8ae795116f)
 
 연결 대상에 등록된 인스턴스를 대상으로 접근 통제 정책 및 명령어 통제 정책을 설정할 수 있습니다.
@@ -112,6 +124,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 | #2 | user A | Instance A, Instance B | [허용] cd |
 | #3 | user B | Instance A | [금지] reboot |
 
+<a id="manage-policies-create-a-policy"></a>
 #### 정책 생성
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/3d0c97b7-43fd-459c-95f3-a9873cc1f861)
 
@@ -129,6 +142,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 > 아래의 명령어에 대해서는 명령어 정책 등록 유무와 관계없이 모두 차단됩니다.
 > * 우회 차단 명령어: SSH, TELNET, SFTP, RCP, SCP, FTP, RSAP, RLOGIN 등
 
+<a id="manage-policies-change-the-policy-order"></a>
 #### 정책 순서 변경
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/2342d3d9-a7f9-43d4-a474-0c514d5dda0b)
 
@@ -137,6 +151,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
    2. **순서 변경 후**에서 수정한 우선순위의 미리 보기를 확인합니다. 미리 보기는 수정한 정책을 기준으로 앞, 뒤 순서의 정책이 함께 표시됩니다. 
    3. **저장**을 클릭하여 정책의 우선순위를 변경합니다.
 
+<a id="manage-policies-2"></a>
 #### 정책 관리
 
 * **수정**: 선택한 정책의 내용을 수정할 수 있습니다.
@@ -144,6 +159,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 * **삭제**: 선택한 정책을 삭제할 수 있습니다.
 * **상세 보기**: 선택한 정책의 세부 내용을 확인할 수 있습니다.
 
+<a id="manage-policies-batch-register"></a>
 #### 일괄 등록
 ![image](https://github.com/user-attachments/assets/0f6e47fe-f870-4a8a-a08b-1749a39decef)
 
@@ -151,8 +167,10 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 * **일괄 등록**: 템플릿을 이용하여 정책을 일괄적으로 업로드 제공
 * **정책 일괄 다운로드**: 현재 적용되어 있는 정책 목록의 다운로드 제공
 
-### 자원 관리
+<a id="manage-resources"></a>
+### 자원 관리 { #manage-resources }
 
+<a id="manage-resources-manage-instances"></a>
 #### 인스턴스 관리
 ![image](https://github.com/user-attachments/assets/5313b554-47f7-4b54-acbe-0f6b29424a39)
 
@@ -186,6 +204,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 
 * **서비스 이용현황 다운로드**: 현재 등록되어 있는 서비스 대상의 목록을 다운로드할 수 있습니다.
 
+<a id="manage-resources-web-terminal-management"></a>
 #### 웹 터미널 관리
 ![image](https://github.com/user-attachments/assets/237364f8-f54b-4e32-9f6c-5a5dfef6574e)
 
@@ -233,6 +252,7 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 > * 웹 터미널의 **IP 접근 제어**에 접속 대상 인스턴스 IP가 추가되어 있어야 합니다.
 > * 접속 대상 인스턴스의 Security Groups에서 웹 터미널 IP로 443 포트 아웃바운드 정책이 추가되어 있어야 합니다.
 
+<a id="manage-resources-resource-groups"></a>
 #### 자원 그룹
 
 **자원 관리 > 자원 그룹** 탭에서는 연결 대상에 등록되어 있는 인스턴스 그룹을 생성 및 관리할 수 있습니다.
@@ -243,11 +263,13 @@ NHN Bastion 서비스 이용 권한을 가진 사용자 목록입니다. 사용�
 * **수정**: 자원 그룹을 수정할 수 있습니다.
 * **삭제**: 자원 그룹을 선택해 삭제할 수 있습니다.
 
-### 이력 관리
+<a id="manage-history"></a>
+### 이력 관리 { #manage-history }
 
 NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 관리할 수 있습니다. 로그 조회 기간은 최대 일주일까지 설정할 수 있습니다.
 이력은 최대 6개월간 보관되며, 6개월 이상 보관이 필요할 경우 <strong>환경 설정 > 로그 관리</strong>에서 Object Storage에 백업할 수 있습니다.
 
+<a id="manage-history-live-sessions"></a>
 #### 실시간 세션
 ![image](https://github.com/user-attachments/assets/ca70cf06-2d74-4ca7-ab57-51e02ec6b083)
 
@@ -256,6 +278,7 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
 * **상세 보기**: 연결되어 있는 사용자 세션의 상세 정보를 확인할 수 있습니다.
 * **세션 차단**: 연결되어 있는 사용자 세션을 차단합니다.
 
+<a id="manage-history-user-access-history"></a>
 #### 사용자 접근 이력
 ![image](https://github.com/user-attachments/assets/2defa233-35b5-4dde-82bf-7e0238bc055b)
 
@@ -265,6 +288,7 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
     * **기본 정보**: 선택한 이력의 세션 정보를 확인할 수 있습니다.
     * **로그**: 선택한 이력의 세션에서 사용한 명령어 이력을 확인할 수 있습니다.
 
+<a id="manage-history-command-usage-history"></a>
 #### 명령어 사용 이력
 ![image](https://github.com/user-attachments/assets/1c6446b9-e452-49fa-837d-5d5122191678)
 
@@ -276,6 +300,7 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
     * **기본 정보**: 선택한 이력의 세션 정보를 확인할 수 있습니다.
     * **로그**: 선택한 이력의 세션에서 사용한 명령어 이력을 확인할 수 있습니다.
  
+<a id="manage-history-file-transfer-history"></a>
 #### 파일 전송 이력
 ![image](https://github.com/user-attachments/assets/27313eff-6b28-4908-943a-c6c3d621df57)
 
@@ -285,8 +310,10 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
     * **기본 정보**: 선택한 이력의 세션 정보를 확인할 수 있습니다.
     * **로그**: 선택한 이력의 세션에서 사용한 명령어 이력을 확인할 수 있습니다.
 
-### 환경 설정
+<a id="set-up-an-environment"></a>
+### 환경 설정 { #set-up-an-environment }
 
+<a id="set-up-an-environment-session-timeouts"></a>
 #### 세션 타임아웃
 
 인스턴스 접근 시에 웹 터미널에서 제공하는 세션 타임아웃 시간을 설정할 수 있습니다.
@@ -294,10 +321,12 @@ NHN Bastion 서비스를 이용해 인스턴스에 접근한 이력을 �
 > [참고]
 > 웹 터미널에서 제공하는 세션 타임아웃 설정이므로, 운영체제에서 설정한 세션 타임아웃과는 별개로 동작합니다.
 
+<a id="set-up-an-environment-maximum-connection-sessions"></a>
 #### 최대 연결 세션
 
 사용자가 동시에 연결할 수 있는 최대 세션 수를 설정할 수 있습니다.
 
+<a id="set-up-an-environment-manage-logs"></a>
 #### 로그 관리
 
 NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storage에 백업할 수 있습니다.
@@ -321,6 +350,7 @@ NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storag
 > [주의]
 > 최초 생성된 웹 터미널이 위치한 VPC에 인터넷 게이트웨이가 없는 경우에는 다른 리전의 Object Storage 백업이 지원되지 않습니다.
 
+<a id="set-up-an-environment-manage-connection-ports"></a>
 #### 접속 포트 관리
 
 인스턴스 접근에 사용되는 SSH 포트를 지정할 수 있습니다.
@@ -328,6 +358,7 @@ NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storag
 > [참고]
 > 웹 터미널에서 접근 대상 인스턴스로 연결할 때 이용하는 포트로, 운영체제에서 설정한 SSH 포트로 설정해야 합니다.
 
+<a id="set-up-an-environment-encryption"></a>
 #### 암호화
 
 암호화 활성화 여부와 적용된 대칭 키 ID를 확인할 수 있습니다.
@@ -336,10 +367,12 @@ Secure Key Manager에서 키 회전을 수행한 경우 키 회전 버튼을 통
 > [주의]
 > Secure Key Manager에서 키 회전 수행 후 NHN Bastion 서비스에서 키를 업데이트하지 않을 경우 로그 조회에 오류가 발생할 수 있습니다.
 
+<a id="set-up-an-environment-session-blocking"></a>
 #### 세션 차단
 
 사용자가 일정 횟수 이상 금지 명령어를 사용하면 세션을 차단할 수 있습니다.
 
+<a id="set-up-an-environment-account-lockout"></a>
 #### 계정 잠금
 
 인증 실패 및 세션 차단됨에 따라 계정을 잠금할 수 있습니다.
@@ -353,6 +386,7 @@ Secure Key Manager에서 키 회전을 수행한 경우 키 회전 버튼을 통
 > **사용자 관리**에서 관리자가 직접 계정을 잠금 처리하는 경우에는 계정 잠금 시간과 상관없이 무기한 잠깁니다.
 > **실시간 세션**에서 관리자가 직접 세션을 차단하는 경우에는 세션 차단 횟수에 포함되지 않습니다.
 
+<a id="set-up-an-environment-db-replication"></a>
 #### DB 이중화
 
 사용자 접근 이력, 명령어 사용 이력, 파일 전송 이력을 저장하는 DB를 이중화하여 서비스 고가용성을 제공합니다.
@@ -360,6 +394,7 @@ Secure Key Manager에서 키 회전을 수행한 경우 키 회전 버튼을 통
 > [주의]
 > DB 이중화 사용/미사용으로 구성을 변경하는 동안에는 NHN Bastion 서비스 이용이 불가능합니다. 구성 변경은 15분 정도 소요될 수 있습니다.
 
+<a id="set-up-an-environment-delete-nhn-bastion"></a>
 #### NHN Bastion 삭제
 
 NHN Bastion 서비스에서 생성된 모든 자원을 삭제합니다.
@@ -368,12 +403,14 @@ NHN Bastion 서비스에서 생성된 모든 자원을 삭제합니다.
 > NHN Bastion 서비스 이용 중 생성된 데이터와 서비스 내의 모든 리소스가 삭제되며, 한번 삭제된 정보는 복구할 수 없습니다.
 
 
-### 웹 터미널
+<a id="web-terminal"></a>
+### 웹 터미널 { #web-terminal }
 브라우저 기반의 웹 터미널을 제공하며, 파일 업로드/다운로드 기능을 제공합니다.
 
 >[참고]
 > 로컬에서 복사한 내용을 원격 서버에 붙여 넣기 위해 브라우저에서 클립보드에 저장된 텍스트 또는 이미지를 확인할 수 있는 권한을 허용해야 합니다.
 
+<a id="web-terminal-transfer-files"></a>
 #### 파일 전송
 우측 화살표 버튼을 클릭해 파일 내비게이터를 실행할 수 있습니다. 파일 내비게이터를 통하여 원하는 경로의 파일을 업로드하거나 다운로드할 수 있습니다.
 우측 화살표 버튼을 클릭해 글꼴 크기를 조절할 수 있습니다.
