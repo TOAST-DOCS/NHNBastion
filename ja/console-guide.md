@@ -1,15 +1,20 @@
-## Security > NHN Bastion > コンソール使用ガイド
+<!-- pre-align:aligned sig=64f6ff071b1f -->
+
+<a id="security-nhn-bastion-console-user-guide"></a>
+## Security > NHN Bastion > コンソール使用ガイド { #security-nhn-bastion-console-user-guide }
 NHN Bastionを利用してNHN Cloudのインスタンスへのアクセスを制御できます。この文書では、NHN CloudコンソールでNHN Bastionを作成し、アクセスが必要なインスタンスに接続する方法と、ユーザーとポリシー、リソース、履歴を管理する方法について説明します。
-### はじめに
+<a id="get-started"></a>
+### はじめに { #get-started }
 
 1. NHN Bastionを使用するためには、まず、NHN Bastionサービスを有効にします。
 2. NHN Bastionはサービスを提供するため、API連携を通じてユーザーのリソースにアクセスできる権限が必要です。
 
-### NHN Bastionの作成
+<a id="create-an-nhn-bastion"></a>
+### NHN Bastionの作成 { #create-an-nhn-bastion }
 ![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
 
 1. **Security > NHN Bastion** に移動します。
-2. 各項目を設定し、下部の**インスタンス作成**をクリックします。
+2. 各項目を設定し、下部の**Webターミナル作成**をクリックします。
     * **名前**(必須):複数のWebターミナルを利用する場合、Webターミナルを区別するための名前。
     * **アベイラビリティゾーン**(必須)：Webターミナルで使用するアベイラビリティゾーン   
     * **タイプ**(必須): Webターミナルのインスタンス性能
@@ -30,10 +35,14 @@ NHN Bastionを利用してNHN Cloudのインスタンスへのアクセスを制
 > * Secure Key Managerサービスでログ暗号化に設定した 対称鍵をローテーションする場合、以前のバージョンの鍵をすぐに削除しないように注意が必要です。
 > * Secure Key Managerサービスでログ暗号化に設定した 対称鍵を削除すると、暗号化された ログを復号できません。対称鍵を誤って削除しないように注意して管理する必要があります。
 
-### インスタンス接続
+<a id="connecte-instances"></a>
+### インスタンス接続 { #connecte-instances }
 
 <strong>ポリシー管理</strong>でユーザーにアクセスが許可されたインスタンスリストのみ表示され、アクセスが許可されたインスタンスにアクセスできます。
 
+<img width="1615" height="223" alt="image" src="https://github.com/user-attachments/assets/5f42116a-1bd5-455d-997d-9fe32fbed925" />
+
+<a id="connecte-instances-access-instances"></a>
 #### インスタンスへのアクセス
 
 1. アクセスが必要なインスタンスで**接続**をクリックします。
@@ -54,15 +63,36 @@ NHN Bastionを利用してNHN Cloudのインスタンスへのアクセスを制
 > * パスワード認証はOSでパスワードアクセスができるように設定する必要があります。
 > * 一時的なSSHキー認証は、スクリプトをコピーしたWebターミナルを通じてのみアクセスできます。
 
-### ユーザー管理
+<a id="connecte-instances-deploy-scripts"></a>
+#### スクリプトのデプロイ
+スクリプトのデプロイ機能を通じて、複数のインスタンスにコマンドやスクリプトを実行できます。
+
+1. スクリプトやコマンドをデプロイするインスタンスを選択します。
+2. **スクリプトのデプロイ**をクリックします。
+3. Webターミナル、認証情報の入力方式を選択した後、認証情報を入力します。
+   * **全体**:デプロイ対象インスタンスの認証情報がすべて同一の場合に使用します。
+   * **個別**:デプロイ対象インスタンスの認証情報が異なる場合に使用します。
+4. **デプロイ**をクリックします。
+5. スクリプトのデプロイ状況で、実行結果およびデプロイ結果を確認できます。
+6. **デプロイ終了**からデプロイを中止できます。
+7. **デプロイ状況**をクリックすると、進行中のデプロイ状況や結果を確認できます。
+
+<a id="manage-users"></a>
+### ユーザー管理 { #manage-users }
 
 NHN Bastionサービスに権限があるユーザーリストを確認し、ユーザーグループを作成・管理できます。
 
+<a id="manage-users-user-list"></a>
 #### ユーザーリスト
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/38558289-7b24-4030-899a-9a202b75a2e4)
+<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/2897e7a3-3ef5-46be-a966-e8ed3aecd900" />
 
 NHN Bastionサービス利用権限を持つユーザーのリストです。ユーザーの権限および最後にインスタンスにアクセスした日時を確認できます。
+管理機能を通じて、ユーザーのアカウントをロックしたり、ロックを解除したりできます。
 
+> [参考]
+> 管理者が直接アカウントをロック処理する場合、**環境設定**のアカウントロック時間に関わらず、無期限でロックされます。
+
+<a id="manage-users-groups"></a>
 #### グループ
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/99d6d052-bca4-4150-a55e-99d375de7dc1)
 
@@ -73,7 +103,8 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 * **修正**:作成されたユーザーグループを修正できます。
 * **削除**:選択したユーザーグループを削除できます。
 
-### ポリシー管理
+<a id="manage-policies"></a>
+### ポリシー管理 { #manage-policies }
 ![image](https://github.com/user-attachments/assets/0a3683bb-5661-4867-83a6-6a8ae795116f)
 
 接続対象に登録されたインスタンスを対象にアクセス制御ポリシーとコマンド制御ポリシーを設定できます。
@@ -92,6 +123,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 | #2 | user A | Instance A, Instance B | [許可] cd |
 | #3 | user B | Instance A | [禁止] reboot |
 
+<a id="manage-policies-create-a-policy"></a>
 #### ポリシー作成
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/3d0c97b7-43fd-459c-95f3-a9873cc1f861)
 
@@ -109,6 +141,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 > 下記のコマンドについては、コマンドポリシーの登録の有無に関わらず、全てブロックされます。
 > * 迂回遮断コマンド: SSH, TELNET, SFTP, RCP, SCP, FTP, RSAP, RLOGINなど
 
+<a id="manage-policies-change-the-policy-order"></a>
 #### ポリシー順序の変更
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/2342d3d9-a7f9-43d4-a474-0c514d5dda0b)
 
@@ -117,6 +150,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
    2. **順序変更後**で修正した優先順位のプレビューを確認します。プレビューは、修正したポリシーを基準に、前後のポリシーが一緒に表示されます。
    3. **保存**をクリックして、ポリシーの優先順位を変更します。
 
+<a id="manage-policies-2"></a>
 #### ポリシー管理
 
 * **修正**:選択したポリシーの内容を修正できます。
@@ -124,6 +158,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 * **削除**:選択したポリシーを削除できます。
 * **詳細表示**:選択したポリシーの詳細を確認できます。
 
+<a id="manage-policies-batch-register"></a>
 #### 一括登録
 ![image](https://github.com/user-attachments/assets/0f6e47fe-f870-4a8a-a08b-1749a39decef)
 
@@ -131,8 +166,10 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 * **一括登録**：テンプレートを利用してポリシーを一括でアップロード提供
 * **ポリシー一括ダウンロード**：現在適用されているポリシーリストのダウンロードを提供
 
-### リソース管理
+<a id="manage-resources"></a>
+### リソース管理 { #manage-resources }
 
+<a id="manage-resources-manage-instances"></a>
 #### インスタンス管理
 ![image](https://github.com/user-attachments/assets/5313b554-47f7-4b54-acbe-0f6b29424a39)
 
@@ -165,6 +202,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 > インスタンス作成または削除に対する変更事項は最大5分後に反映される場合があります。
 * **サービス利用状況ダウンロード**：現在登録されているサービス対象のリストをダウンロードできます。
 
+<a id="manage-resources-web-terminal-management"></a>
 #### Webターミナル管理
 ![image](https://github.com/user-attachments/assets/237364f8-f54b-4e32-9f6c-5a5dfef6574e)
 
@@ -211,6 +249,7 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 > * Webターミナルの**IPアクセス制御**に接続対象インスタンスIPが追加されている必要があります。
 > * 接続対象インスタンスのSecurity GroupsでWebターミナルのIPに443ポートアウトバウンドポリシーが追加されている必要があります。
 
+<a id="manage-resources-resource-groups"></a>
 #### リソースグループ
 
 **リソース管理 > リソースグループ**タブでは、接続対象に登録されているインスタンスグループを作成及び管理できます。
@@ -221,11 +260,13 @@ NHN Bastionサービス利用権限を持つユーザーのリストです。ユ
 * **修正**:リソースグループを修正できます。
 * **削除**:リソースグループを選択して削除できます。
 
-### 履歴管理
+<a id="manage-history"></a>
+### 履歴管理 { #manage-history }
 
 NHN Bastionサービスを利用してインスタンスにアクセスした履歴を管理できます。ログ照会期間は最大 一週間まで設定できます。
 履歴は最大6か月間保管され、6か月以上保管が必要な場合は、<strong>環境設定 >ログ管理</strong>でObject Storageにバックアップできます。
 
+<a id="manage-history-live-sessions"></a>
 #### リアルタイムセッション
 ![image](https://github.com/user-attachments/assets/ca70cf06-2d74-4ca7-ab57-51e02ec6b083)
 
@@ -234,6 +275,7 @@ NHN Bastionサービスを利用してインスタンスにアクセスした履
 * **詳細表示**：接続されているユーザーセッションの詳細情報を確認できます。
 * **セッションブロック**：接続されているユーザーセッションをブロックします。
 
+<a id="manage-history-user-access-history"></a>
 #### ユーザーアクセス履歴
 ![image](https://github.com/user-attachments/assets/2defa233-35b5-4dde-82bf-7e0238bc055b)
 
@@ -243,6 +285,7 @@ NHN Bastionサービスを利用してインスタンスにアクセスした履
     * **基本情報**:選択した履歴のセッション情報を確認できます。
     * **ログ**:選択した履歴のセッションで使用したコマンドの履歴を確認できます。
 
+<a id="manage-history-command-usage-history"></a>
 #### コマンド使用履歴
 ![image](https://github.com/user-attachments/assets/1c6446b9-e452-49fa-837d-5d5122191678)
 
@@ -253,6 +296,7 @@ NHN Bastionサービスを利用してインスタンスにアクセスした履
     * **基本情報**:選択した履歴のセッション情報を確認できます。
     * **ログ**:選択した履歴のセッションで使用したコマンド履歴を確認できます。
 
+<a id="manage-history-file-transfer-history"></a>
 #### ファイル送信履歴
 ![image](https://github.com/user-attachments/assets/27313eff-6b28-4908-943a-c6c3d621df57)
 
@@ -262,9 +306,10 @@ NHN Bastionサービスを利用してインスタンスにアクセスした履
     * **基本情報**：選択した履歴のセッション情報を確認できます。
     * **ログ**:選択した履歴のセッションで使用した コマンド履歴を確認できます。
 
-### 環境設定
-![image](https://github.com/user-attachments/assets/b88fbdf3-a16c-426a-8a5f-a71ced18cc98)
+<a id="set-up-an-environment"></a>
+### 環境設定 { #set-up-an-environment }
 
+<a id="set-up-an-environment-session-timeouts"></a>
 #### セッションタイムアウト
 
 インスタンスアクセス時に、Webターミナルで提供するセッションタイムアウト時間を設定できます。
@@ -272,10 +317,12 @@ NHN Bastionサービスを利用してインスタンスにアクセスした履
 > [参考]
 > Webターミナルで提供するセッションタイムアウト設定なので、OSで設定したセッションタイムアウトとは別に動作します。
 
+<a id="set-up-an-environment-maximum-connection-sessions"></a>
 #### 最大接続セッション
 
 ユーザーが同時に接続できる最大セッション数を設定できます。
 
+<a id="set-up-an-environment-manage-logs"></a>
 #### ログ管理
 
 NHN Bastionサービスで提供するログを顧客のObject Storageにバックアップできます。
@@ -299,6 +346,7 @@ NHN Bastionサービスで提供するログを顧客のObject Storageにバッ
 > [注意]
 > 最初に作成されたWebターミナルが位置するVPCにインターネットゲートウェイがない場合は、他のリージョンのObject Storageバックアップがサポートされません。
 
+<a id="set-up-an-environment-manage-connection-ports"></a>
 #### 接続ポート管理
 
 インスタンスアクセスに使用するSSHポートを指定できます。
@@ -306,6 +354,7 @@ NHN Bastionサービスで提供するログを顧客のObject Storageにバッ
 > [参考]
 > Webターミナルからアクセス対象インスタンスに接続する際に利用するポートで、OSで設定したSSHポートに設定する必要があります。
 
+<a id="set-up-an-environment-encryption"></a>
 #### 暗号化
 
 暗号化が有効かどうかと、適用された 対称鍵IDを確認できます。
@@ -314,6 +363,34 @@ Secure Key Managerでキーローテーションを実行した場合、[キー�
 > [注意]
 > Secure Key Managerでキーローテーションを実行した後、NHN Bastionサービスでキーを更新しない場合、ログ照会時にエラーが発生する可能性があります。
 
+<a id="set-up-an-environment-session-blocking"></a>
+#### セッション遮断
+
+ユーザーが禁止コマンドを一定回数以上使用した場合、セッションを遮断できます。
+
+<a id="set-up-an-environment-account-lockout"></a>
+#### アカウントロック
+
+認証の失敗やセッションの遮断に応じて、アカウントをロックできます。
+* アカウントロック時間:アカウントがロックされた場合のロック時間を設定します。
+* 連続セッション遮断:連続して一定回数以上セッションが遮断された場合、アカウントがロックされます。
+* 1時間あたりのセッション遮断: 1時間以内に一定回数以上セッションが遮断された場合、アカウントがロックされます。
+* 連続認証失敗:連続して一定回数以上認証に失敗した場合、アカウントがロックされます。
+* 1時間あたりの認証失敗: 1時間以内に一定回数以上認証に失敗した場合、アカウントがロックされます。
+
+> [参考]
+> **ユーザー管理**で管理者が直接アカウントをロック処理する場合、アカウントロック時間に関わらず無期限でロックされます。
+> **リアルタイムセッション**で管理者が直接セッションを遮断する場合、セッション遮断回数にはカウントされません。
+
+<a id="set-up-an-environment-db-replication"></a>
+#### DB冗長化
+
+ユーザーアクセス履歴、コマンド使用履歴、ファイル転送履歴を保存するDBを冗長化し、サービスの高可用性を提供します。
+
+> [注意]
+> DB冗長化の使用/未使用へ構成を変更している間は、NHN Bastionサービスを利用できません。構成変更には15分程度かかる場合があります。
+
+<a id="set-up-an-environment-delete-nhn-bastion"></a>
 #### NHN Bastionの削除
 
 NHN Bastionサービスで作成されたすべてのリソースを削除します。
@@ -322,9 +399,14 @@ NHN Bastionサービスで作成されたすべてのリソースを削除しま
 > NHN Bastionサービス利用中に作成されたデータとサービス内のすべてのリソースが削除され、一度削除された情報は復元できません。
 
 
-### Webターミナル
+<a id="web-terminal"></a>
+### Webターミナル { #web-terminal }
 ブラウザベースのWebターミナルを提供し、ファイルアップロード/ダウンロード機能を提供します。
 
+>[参考]
+> ローカルでコピーした内容を遠隔サーバーに貼り付けるために、ブラウザでクリップボードに保存されたテキストや画像を確認できる権限を許可する必要があります。
+
+<a id="web-terminal-transfer-files"></a>
 #### ファイル転送
 右矢印ボタンをクリックしてファイルナビゲーターを実行できます。ファイルナビゲーターを通じて、希望のパスのファイルをアップロードまたはダウンロードできます。
 右矢印ボタンをクリックしてフォントサイズを調整できます。

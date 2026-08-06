@@ -1,10 +1,14 @@
-## Security > NHN Bastion > 概要
+<!-- pre-align:aligned sig=4b1c1907bb8f -->
+
+<a id="security-nhn-bastion-overview"></a>
+## Security > NHN Bastion > 概要 { #security-nhn-bastion-overview }
 
 
 NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるように提供するサーバーアクセス制御サービスです。
 
 
-### 主な機能
+<a id="main-features"></a>
+### 主な機能 { #main-features }
 
 
 * インスタンスへのSSHアクセスを制御することができ、許可およびブロックするコマンドを登録できます。
@@ -20,9 +24,11 @@ NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるよ
 * リアルタイムモニタリング及びセッションブロック機能を提供します。
 
 
-### 機能説明
+<a id="feature-description"></a>
+### 機能説明 { #feature-description }
 
 
+<a id="feature-description-connect-instances"></a>
 #### インスタンス接続
 
 
@@ -30,7 +36,9 @@ NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるよ
 
 * SSHキー、パスワード、一時的なSSHキーで3つの接続方法を提供し、お客様の環境に合った認証方法を使用できます。
 
+* コマンド(スクリプト)を複数のインスタンスに一度にデプロイできます。
 
+<a id="feature-description-manage-users"></a>
 #### ユーザー管理
 
 
@@ -39,12 +47,14 @@ NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるよ
 * ユーザーグループを作成および管理することができ、ロール、部署などでユーザーをグループ化できます。
 
 
+<a id="feature-description-manage-policies"></a>
 #### ポリシー管理
 
 
 * ユーザーに対するアクセス制御およびコマンド制御ポリシーを作成し、管理できます。
 
 
+<a id="feature-description-manage-resources"></a>
 #### リソース管理
 
 
@@ -64,6 +74,7 @@ NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるよ
 * ファイル転送履歴を監査できます。
 
 
+<a id="feature-description-manage-history"></a>
 #### 履歴管理
 
 
@@ -71,6 +82,7 @@ NHN BastionはNHN Cloudのインスタンスに安全にアクセスできるよ
 
 * ユーザーのアクセス履歴とコマンドの使用履歴を監査できます。
 
+<a id="feature-description-set-up-preferences"></a>
 #### 環境設定
 
 

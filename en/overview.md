@@ -1,10 +1,14 @@
-## Security > NHN Bastion > Overview
+<!-- pre-align:aligned sig=4b1c1907bb8f -->
+
+<a id="security-nhn-bastion-overview"></a>
+## Security > NHN Bastion > Overview { #security-nhn-bastion-overview }
 
 
 NHN Bastion is a server access control service for secure access to infrastructure assets used for instances on NHN Cloud.
 
 
-### Main Features
+<a id="main-features"></a>
+### Main Features { #main-features }
 
 
 * Allows you to control SSH access to your instance, and register commands to allow and block.
@@ -20,9 +24,11 @@ NHN Bastion is a server access control service for secure access to infrastructu
 * Provides real-time monitoring and session blocking.
 
 
-### Feature Description
+<a id="feature-description"></a>
+### Feature Description { #feature-description }
 
 
+<a id="feature-description-connect-instances"></a>
 #### Connect Instances
 
 
@@ -30,7 +36,9 @@ NHN Bastion is a server access control service for secure access to infrastructu
 
 * Provides three access methods - SSH key, password, and temporary SSH key - so you can use the authentication method that fits your environment.
 
+* You can deploy commands (scripts) to multiple instances at once.
 
+<a id="feature-description-manage-users"></a>
 #### Manage Users
 
 
@@ -39,12 +47,14 @@ NHN Bastion is a server access control service for secure access to infrastructu
 * Creates and manages user groups, and group users by role, department, and more.
 
 
+<a id="feature-description-manage-policies"></a>
 #### Manage Policies
 
 
 * Creates and manages access control and command and control policies for users.
 
 
+<a id="feature-description-manage-resources"></a>
 #### Manage Resources
 
 
@@ -62,6 +72,7 @@ NHN Bastion is a server access control service for secure access to infrastructu
 * Allows you to check scripts for using temporary SSH key access methods.
 
 
+<a id="feature-description-manage-history"></a>
 #### Manage History
 
 
@@ -71,8 +82,11 @@ NHN Bastion is a server access control service for secure access to infrastructu
 
 * Audits file transfer history.
 
+
+<a id="feature-description-set-up-preferences"></a>
 #### Set up Preferences
 
 
 * Provides configuration features such as session timeout, maximum connected sessions, log backup, connection port management, and encryption.
+
 

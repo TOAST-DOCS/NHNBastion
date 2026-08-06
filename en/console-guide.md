@@ -1,15 +1,20 @@
-## Security > NHN Bastion > Console User Guide
+<!-- pre-align:aligned sig=64f6ff071b1f -->
+
+<a id="security-nhn-bastion-console-user-guide"></a>
+## Security > NHN Bastion > Console User Guide { #security-nhn-bastion-console-user-guide }
 NHN Bastion allows you to control access to instances on NHN Cloud. This document describes how to create an NHN Bastion in the NHN Cloud console, connect it to the instances you need access to, and manage users and their policies, resources, and history.
-### Get Started
+<a id="get-started"></a>
+### Get Started { #get-started }
 
 1. To use NHN Bastion, the first step is to enable the NHN Bastion service.
 2. NHN Bastion requires permission to access your resources through API connections to provide services.
 
-### Create an NHN Bastion
+<a id="create-an-nhn-bastion"></a>
+### Create an NHN Bastion { #create-an-nhn-bastion }
 ![image](https://github.com/user-attachments/assets/bdcf129e-996a-44b1-8c17-09f4cddf9008)
 
 1. Go to **Security > NHN Bastion**.
-2. Set each item and click **Create Instance** at the bottom.
+2. Set each item and click **Create Web Terminal** at the bottom.
     * **Name**(required): A name to distinguish between web terminals if you use multiple web terminals.
     * **Availability** zone (required): Availability zone to use in the web terminal.
     * **Type**(required): Instance performance of the web terminal.
@@ -31,10 +36,14 @@ NHN Bastion allows you to control access to instances on NHN Cloud. This documen
 > * If the Secure Key Manager service rotates the symmetric key you set up for log encryption, you need to be careful not to immediately delete the old version of the key.
 > * If you delete the symmetric key that you set for log encryption in the Secure Key Manager service, the encrypted logs cannot be decrypted. You must manage the symmetric key carefully to avoid accidentally deleting it.
 
-### Connecte Instances
+<a id="connecte-instances"></a>
+### Connecte Instances { #connecte-instances }
 
 In <strong>Manage Policies</strong>, users only see a list of instances they are allowed to access, and they can access the instances they are allowed to access.
 
+<img width="1615" height="223" alt="image" src="https://github.com/user-attachments/assets/5f42116a-1bd5-455d-997d-9fe32fbed925" />
+
+<a id="connecte-instances-access-instances"></a>
 #### Access Instances
 
 1. On the instance you need access to, click **Connect**.
@@ -55,17 +64,34 @@ In <strong>Manage Policies</strong>, users only see a list of instances they are
 > * Password authentication requires the operating system to enable password access.
 > * Temporary SSH key authentication is only accessible through the web terminal from which you copied the script.
 
-### Manage Users
+<a id="connecte-instances-deploy-scripts"></a>
+#### Deploy Scripts
+The script deployment feature allows you to run commands/scripts on multiple instances.
+
+1. Select instances for deploying scripts/commands.
+2. Click **Deploy Scripts**.
+3. Select a web terminal, how to enter authentication information and enter the authentication information.
+   * **All**: Use when the authentication information of the deployment target instances is all the same.
+   * **Each**: Use when the authentication information of the deployment target instances is different.
+4. Click **Deploy**.
+5. You can check the execution results and deployment results in the script deployment status.
+6. You can end the deployment with **End Deployment**.
+7. You can view ongoing deployments and the results by clicking **Deployment Progress**.
+
+<a id="manage-users"></a>
+### Manage Users { #manage-users }
 
 You can view a list of users authorized to use the NHN Bastion service and create and manage user groups.
 
+<a id="manage-users-user-list"></a>
 #### User List
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/38558289-7b24-4030-899a-9a202b75a2e4)
+<img width="1619" height="337" alt="image" src="https://github.com/user-attachments/assets/2897e7a3-3ef5-46be-a966-e8ed3aecd900" />
 
 A list of users authorized to use the NHN Bastion service. You can check the user's permissions and when they last accessed the instance.
+You can lock or unlock a user's account with the management function.
 
-#### Group
-![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/99d6d052-bca4-4150-a55e-99d375de7dc1)
+> [Note]
+> When an administrator locks an account directly, it will be locked permanently, regardless of the lockout duration of **Preferences**.
 
 You can create and manage user groups, and the groups you create can be enrolled as access subjects on the <strong>Manage Policies</strong> tab.
 
@@ -74,7 +100,13 @@ You can create and manage user groups, and the groups you create can be enrolled
 * **Modify**: Modify the created user group.
 * **Delete**: Delete the selected user group.
 
-### Manage Policies
+<a id="manage-users-groups"></a>
+#### Groups
+
+<!-- TODO: translate body -->
+
+<a id="manage-policies"></a>
+### Manage Policies { #manage-policies }
 ![image](https://github.com/user-attachments/assets/0a3683bb-5661-4867-83a6-6a8ae795116f)
 
 You can set access control policies and command control policies for instances enrolled in the connection target.
@@ -93,6 +125,7 @@ If the policy is applied as shown in the [table] below,
 | #2 | user A | Instance A, Instance B | [Allow] cd |
 | #3 | user B | Instance A | [Deny] reboot |
 
+<a id="manage-policies-create-a-policy"></a>
 #### Create a policy
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/3d0c97b7-43fd-459c-95f3-a9873cc1f861)
 
@@ -110,6 +143,7 @@ If the policy is applied as shown in the [table] below,
 The following commands are blocked regardless of whether you have a command policy enrollment.
 > * Bypass blocking commands: SSH, TELNET, SFTP, RCP, SCP, FTP, RSAP, RLOGIN, etc.
 
+<a id="manage-policies-change-the-policy-order"></a>
 #### Change the policy order
 ![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/2342d3d9-a7f9-43d4-a474-0c514d5dda0b)
 
@@ -118,6 +152,7 @@ You can change the priority of a policy.
    2. In **After Reorder**, see a preview of the priorities you modified. The preview shows the policies in first and last order based on the policy you modified. 
    3. Click **Save** to change the priority of the policy.
 
+<a id="manage-policies-2"></a>
 #### Manage Policies
 
 * **Modify**: You can edit the contents of the selected policy.
@@ -125,6 +160,7 @@ You can change the priority of a policy.
 * **Delete**: You can delete the selected policy.
 * **View Details**: You can view the details of the selected policy.
 
+<a id="manage-policies-batch-register"></a>
 #### Batch Register
 ![image](https://github.com/user-attachments/assets/0f6e47fe-f870-4a8a-a08b-1749a39decef)
 
@@ -132,8 +168,10 @@ You can register policies in bulk using the provided templates, and you can down
 * **Batch Register**: Provides policy uploads in bulk using templates
 * **Batch Download of Policies**: Provides a download of a list of currently applied policies
 
-### Manage Resources
+<a id="manage-resources"></a>
+### Manage Resources { #manage-resources }
 
+<a id="manage-resources-manage-instances"></a>
 #### Manage Instances
 ![image](https://github.com/user-attachments/assets/5313b554-47f7-4b54-acbe-0f6b29424a39)
 
@@ -167,6 +205,7 @@ Changes to create or delete instances can take up to 5 minutes to be reflected.
 
 * **Download service utilization**: You can download a list of currently registered service targets.
 
+<a id="manage-resources-web-terminal-management"></a>
 #### Web terminal management
 ![image](https://github.com/user-attachments/assets/237364f8-f54b-4e32-9f6c-5a5dfef6574e)
 
@@ -214,6 +253,7 @@ You cannot delete the first web terminal created when the service is activated; 
 > * Port 443 outbound policy must be added to the web terminal IP in the Security Groups of the instance to access.
 
 
+<a id="manage-resources-resource-groups"></a>
 #### Resource Groups
 
 The **Manage Resources > Resource Groups** tab lets you create and manage groups of instances that are registered to a connection target.
@@ -224,11 +264,13 @@ The **Manage Resources > Resource Groups** tab lets you create and manage groups
 * **Modify**: You can edit the resource group.
 * **Delete**: You can select a group of resources to delete them.
 
-### Manage History
+<a id="manage-history"></a>
+### Manage History { #manage-history }
 
 You can use the NHN Bastion service to manage the history of accesses to your instance. You can set the log retrieval period up to one week.
 History is kept for up to 6 months, and if you need to keep it longer than 6 months, you can back it up to Object Storage in <strong>Preferences > Manage Logs<strong>.
 
+<a id="manage-history-live-sessions"></a>
 #### Live Sessions
 ![image](https://github.com/user-attachments/assets/ca70cf06-2d74-4ca7-ab57-51e02ec6b083)
 
@@ -237,6 +279,7 @@ You can see which sessions are connected to your instance in real time, and you 
 * **View Details**: View details about the connected user session.
 * **Block Sessions**: Block a connected user session.
 
+<a id="manage-history-user-access-history"></a>
 #### User Access History
 ![image](https://github.com/user-attachments/assets/2defa233-35b5-4dde-82bf-7e0238bc055b)
 
@@ -246,6 +289,7 @@ You can see the history of how users have accessed your instance, and you can us
     * **Basic Information**: View session information for the selected history.
     * **Log**: View the history of commands used in the selected history session.
 
+<a id="manage-history-command-usage-history"></a>
 #### Command usage history
 ![image](https://github.com/user-attachments/assets/1c6446b9-e452-49fa-837d-5d5122191678)
 
@@ -257,6 +301,7 @@ You can see what commands users have used, and you can use search criteria and a
     * **Basic Information**: View session information for the selected history.
     * **Log**: View the history of commands used in the selected history session.
  
+<a id="manage-history-file-transfer-history"></a>
 #### File transfer history
 ![image](https://github.com/user-attachments/assets/27313eff-6b28-4908-943a-c6c3d621df57)
 
@@ -266,9 +311,10 @@ You can see the history of users uploading/downloading files to your instance, a
     * **Basic Information**: View session information for the selected history.
     * **Log**: View the history of commands used in the selected history session.
 
-### Set Up an Environment
-![image](https://github.com/user-attachments/assets/b88fbdf3-a16c-426a-8a5f-a71ced18cc98)
+<a id="set-up-an-environment"></a>
+### Set Up an Environment { #set-up-an-environment }
 
+<a id="set-up-an-environment-session-timeouts"></a>
 #### Session timeouts
 
 You can set the session timeout time served by the web terminal when accessing an instance.
@@ -276,10 +322,12 @@ You can set the session timeout time served by the web terminal when accessing a
 > [Note]
 This is a session timeout setting provided by the web terminal, so it works independently of the session timeout set by the operating system.
 
+<a id="set-up-an-environment-maximum-connection-sessions"></a>
 #### Maximum connection sessions
 
 You can set the maximum number of sessions a user can connect to at the same time.
 
+<a id="set-up-an-environment-manage-logs"></a>
 #### Manage Logs
 
 You can back up logs provided by the NHN Bastion service to your own Object Storage.
@@ -303,6 +351,7 @@ You can back up logs provided by the NHN Bastion service to your own Object Stor
 > [Caution]
 > Object Storage backups in other regions are not supported if the VPC where the web terminal was initially created does not have an Internet gateway.
 
+<a id="set-up-an-environment-manage-connection-ports"></a>
 #### Manage Connection Ports
 
 You can specify the SSH port used to access the instance.
@@ -310,6 +359,7 @@ You can specify the SSH port used to access the instance.
 > [Note]
 > The port used to connect from the web terminal to the instance being accessed, which must be set to the SSH port set by your operating system.
 
+<a id="set-up-an-environment-encryption"></a>
 #### Encryption
 
 You can see whether encryption is enabled and the applied symmetric key ID.
@@ -318,6 +368,34 @@ If you performed key rotation in Secure Key Manager, you can update an older ver
 > [Caution]
 > If you do not update the key in the NHN Bastion service after performing key rotation in Secure Key Manager, an error might occur in the log inquiry.
 
+<a id="set-up-an-environment-session-blocking"></a>
+#### Session Blocking
+
+You can block a session if a user uses the banned commands more than a certain number of times.
+
+<a id="set-up-an-environment-account-lockout"></a>
+#### Account Lockout
+
+Your account may be locked due to authentication failure and session blocking.
+* Account Lockout Duration: Set the lockout time when your account is locked.
+* Consecutive Session Blocking: the account will be locked if a certain number of sessions are blocked in a row.
+* Hourly Session Blocking: the account will be locked if a certain number of sessions are blocked within an hour.
+* Continuous Authentication Failed: the account will be locked if you fail to authenticate more than a certain number of times in a row.
+* Hourly Authentication Failed: the account will be locked if you fail to authenticate more than a certain number of times within an hour.
+
+> [Note]
+> When an administrator locks an account directly from **User Management**, it will be locked permanently, regardless of the lockout duration.
+> If an administrator directly blocks a session from **Live Session**, it will not be counted towards the number of session blockings.
+
+<a id="set-up-an-environment-db-replication"></a>
+#### DB Replication
+
+Provides high availability by replicating DB to store user access history, command use history, and file transfer history.
+
+> [Caution]
+> NHN Bastion service will not be available while changing the configuration to enable/disable DB replication. The change would take about 15 minutes.
+
+<a id="set-up-an-environment-delete-nhn-bastion"></a>
 #### Delete NHN Bastion
 
 Delete all resources created by the NHN Bastion service.
@@ -326,9 +404,15 @@ Delete all resources created by the NHN Bastion service.
 > Data created while using the NHN Bastion service and all resources within the service will be deleted, and information cannot be recovered once deleted.
 
 
-### Web Terminal
+<a id="web-terminal"></a>
+### Web Terminal { #web-terminal }
 Provides a browser-based web terminal with file upload/download capabilities.
 
+
+> [Note]
+> To paste what is copied locally to the remote server, you must allow the permission to view text or images stored in the clipboard from the browser.
+
+<a id="web-terminal-transfer-files"></a>
 #### Transfer Files
 You can launch the file navigator by clicking the right arrow button. The file navigator allows you to upload or download files with the desired path.
 You can adjust the font size by clicking the right arrow button.

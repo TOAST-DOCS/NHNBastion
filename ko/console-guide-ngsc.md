@@ -310,10 +310,12 @@ NHN Bastion 서비스에서 제공하는 로그를 고객의 Object Storag
   * 한국(판교) 리전: https://kr1-api-object-storage.nhncloudservice.com
   * 한국(평촌) 리전: https://kr2-api-object-storage.nhncloudservice.com
   * 한국(광주) 리전: https://kr3-api-object-storage.nhncloudservice.com
+  * 한국(대구) 리전: https://kr4-api-object-storage.ngsc.go.kr
 * **리전**
   * 한국(판교) 리전: KR1
   * 한국(평촌) 리전: KR2
   * 한국(광주) 리전: KR3
+  * 한국(대구) 리전: KR4
 
 > [참고]
 > 로그 암호화 사용 시 로그는 복호화하여 Object Storage에 백업됩니다.
