@@ -103,7 +103,14 @@ You can create and manage user groups, and the groups you create can be enrolled
 <a id="manage-users-groups"></a>
 #### Groups
 
-<!-- TODO: translate body -->
+![image](https://github.com/jongwoo-kim-nhn/NHNBastion/assets/174567179/99d6d052-bca4-4150-a55e-99d375de7dc1)
+
+You can create and manage user groups, and the groups you create can be enrolled as access subjects on the <strong>Manage Policies</strong> tab.
+
+* **+ Create Group**: You can create a group by adding or deleting users who are authorized to the NHN Bastion service.
+* **Copy**: You can copy a created user group.
+* **Modify**: You can modify a created user group.
+* **Delete**: You can delete a selected user group.
 
 <a id="manage-policies"></a>
 ### Manage Policies { #manage-policies }
